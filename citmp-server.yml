@@ -1,0 +1,89 @@
+﻿ListenPort: 30120
+
+PreParseResources:
+    - mapmanager
+
+AutoStartResources:
+    - assets
+    - essentialmode
+    - wlcheck
+    - skin
+    - chat
+    - spawnmanager
+    - es_freeroam
+    - fivem-map-skater
+    - baseevents
+    - rconlog
+    - hardcap # prevents too many players from joining
+    - mysql-async
+    - lastpostodb
+    - banking
+    - essence
+    - es_admin
+    - gb_vocal
+    - neverwanted
+    - vehcontrol
+    - MissionText
+    - msq-directions-hud
+    - chasse
+    - paycheck
+    - vdk_inventory
+    - nomsjoueurs
+    - carhud
+    - metiers
+    - vdk_recolt
+    - interiors
+    - loadingscreen
+    - gcidentity
+    - gcInteraction
+    - garages
+    - sirencontrols
+    - gb_needs
+    - gb_foodshops
+    - blanchi
+    - es_slot
+    - gchelp
+    - indicators
+    - carwash
+    - es_holdup
+    - phone
+    - gcillegal
+    - es_weashop
+    - clotheshop
+    - barbershop
+    - taxi
+    - ambulancier
+    - accessories_switcher
+    - co_locvelo
+    - commands
+    - prefecture
+    - Jail
+    - lscustoms
+    - deleteveh
+
+# do change
+RconPassword: 
+
+# configure this, please
+Hostname: Virtuality 2.5 | WHITELIST | EN DEV
+
+# don't change this, it'll cause your server to be unlisted
+Game: GTA5
+
+PlatformServer: updater.fivereborn.com
+
+ScriptDebug: true
+
+DebugLog: true
+
+# set to false to hide from the online server list
+Announce: true
+
+# set to false to require players to be signed in to Steam
+DisableAuth: false
+
+# set to true to disable local script hook plugins
+DisableScriptHook: true
+
+# set to the path of an icon to use in the server browser. it should be square.
+ServerIcon: hello.png
