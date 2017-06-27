@@ -60,7 +60,9 @@ function configLang(lang)
       text7 = "Véhicule vendu",
       text8 = "Véhicule acheté, bonne route",
       text9 = "Fonds insuffisants",
-      text10 = "Véhicule mis à jour"
+      text10 = "Véhicule mis à jour",
+      text11 = "Votre véhicule est endommagé, merci de passer chez les dépanneurs d'abord"
+
   }
 
   elseif lang == "EN" then
@@ -87,7 +89,8 @@ function configLang(lang)
       text7 = "Vehicle sold",
       text8 = "Vehicle bought, good drive",
       text9 = "Insufficient funds",
-      text10 = "Vehicle updated"
+      text10 = "Vehicle updated",
+      text11 = "Your vehicle is damaged, thank you for passing at the convenience store at first"
   }
   end
 end
@@ -108,7 +111,11 @@ function RentrerVehicule()
     SetEntityAsMissionEntity(caissei, true, true)
     local plate = GetVehicleNumberPlateText(caissei)
     if DoesEntityExist(caissei) then
-      TriggerServerEvent('ply_garages:CheckForVeh', plate)
+        if GetVehicleEngineHealth(caissei) < 850 then
+            drawNotification(lang_string.text11)
+        else
+            TriggerServerEvent('ply_garages:CheckForVeh', plate)
+        end
     else
       drawNotification(lang_string.text6)
     end   
