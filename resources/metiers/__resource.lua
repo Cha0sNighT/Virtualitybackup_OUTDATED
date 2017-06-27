@@ -47,6 +47,7 @@ client_script {
 	'pecheur/pecheur_client.lua',
 	'vigneron/vigneron_client.lua',
 	'brasseur/brasseur_client.lua',
+	'avocat/avocat_config.lua',
 	'avocat/avocat_client.lua',
 	'mecano/mecano_client.lua',
 	'mecano/mecano_Menu.lua',
@@ -66,7 +67,6 @@ server_script {
 	'vigneron/vigneron_server.lua',
 	'brasseur/brasseur_config.lua',
 	'brasseur/brasseur_server.lua',
-	'avocat/avocat_config.lua',
 	'avocat/avocat_server.lua',
 	'mecano/mecano_server.lua',
 }

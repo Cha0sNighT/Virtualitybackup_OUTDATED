@@ -42,18 +42,34 @@
 		Citizen.CreateThread(function()
 			while Vigneron_markerBool == true do
 				Wait(0)
+
+				-- RECOLTE --
+
 				if isInServiceVigneron and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Vigne"].x,vigneron_blips["Vigne"].y,vigneron_blips["Vigne"].z, true) <= vigneron_blips["Vigne"].distanceBetweenCoords then
 					TriggerServerEvent('vigneron:serverRequest', "GetRaisin")
 					Citizen.Wait(vigneron_blips["Vigne"].defaultTime)
 				end
-				if isInServiceVigneron and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Cave"].x,vigneron_blips["Cave"].y,vigneron_blips["Cave"].z, true) <= vigneron_blips["Cave"].distanceBetweenCoords then
+
+				-- TRAITEMENTS --
+
+				if isInServiceVigneron and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Cave à vin"].x,vigneron_blips["Cave à vin"].y,vigneron_blips["Cave à vin"].z, true) <= vigneron_blips["Cave à vin"].distanceBetweenCoords then
 					TriggerServerEvent('vigneron:serverRequest', "GetVin")
-					Citizen.Wait(vigneron_blips["Cave"].defaultTime)
+					Citizen.Wait(vigneron_blips["Cave à vin"].defaultTime)
+				end
+				if isInServiceVigneron and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Cave à champagne"].x,vigneron_blips["Cave à champagne"].y,vigneron_blips["Cave à champagne"].z, true) <= vigneron_blips["Cave à champagne"].distanceBetweenCoords then
+					TriggerServerEvent('vigneron:serverRequest', "GetChampagne")
+					Citizen.Wait(vigneron_blips["Cave à champagne"].defaultTime)
 				end
 
-				if isInServiceVigneron and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Point de vente"].x,vigneron_blips["Point de vente"].y,vigneron_blips["Point de vente"].z, true) <= vigneron_blips["Point de vente"].distanceBetweenCoords then
+				-- REVENTE --
+
+				if isInServiceVigneron and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Point de vente vin"].x,vigneron_blips["Point de vente vin"].y,vigneron_blips["Point de vente vin"].z, true) <= vigneron_blips["Point de vente vin"].distanceBetweenCoords then
 					TriggerServerEvent('vigneron:serverRequest', "SellVin")
-					Citizen.Wait(vigneron_blips["Point de vente"].defaultTime)
+					Citizen.Wait(vigneron_blips["Point de vente vin"].defaultTime)
+				end
+				if isInServiceVigneron and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Point de vente champagne"].x,vigneron_blips["Point de vente champagne"].y,vigneron_blips["Point de vente champagne"].z, true) <= vigneron_blips["Point de vente champagne"].distanceBetweenCoords then
+					TriggerServerEvent('vigneron:serverRequest', "SellChampagne")
+					Citizen.Wait(vigneron_blips["Point de vente champagne"].defaultTime)
 				end
 			end
 		end)
@@ -101,12 +117,19 @@
 						DrawMarker(1,vigneron_blips["Vigne"].x,vigneron_blips["Vigne"].y,vigneron_blips["Vigne"].z, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
 					end
 
-					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Cave"].x,vigneron_blips["Cave"].y,vigneron_blips["Cave"].z, true) <= vigneron_blips["Cave"].distanceMarker then
-						DrawMarker(1,vigneron_blips["Cave"].x,vigneron_blips["Cave"].y,vigneron_blips["Cave"].z, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
+					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Cave à vin"].x,vigneron_blips["Cave à vin"].y,vigneron_blips["Cave à vin"].z, true) <= vigneron_blips["Cave à vin"].distanceMarker then
+						DrawMarker(1,vigneron_blips["Cave à vin"].x,vigneron_blips["Cave à vin"].y,vigneron_blips["Cave à vin"].z, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
 					end
 
-					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Point de vente"].x,vigneron_blips["Point de vente"].y,vigneron_blips["Point de vente"].z, true) <= vigneron_blips["Point de vente"].distanceMarker then
-						DrawMarker(1,vigneron_blips["Point de vente"].x,vigneron_blips["Point de vente"].y,vigneron_blips["Point de vente"].z, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
+					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Cave à champagne"].x,vigneron_blips["Cave à champagne"].y,vigneron_blips["Cave à champagne"].z, true) <= vigneron_blips["Cave à champagne"].distanceMarker then
+						DrawMarker(1,vigneron_blips["Cave à champagne"].x,vigneron_blips["Cave à champagne"].y,vigneron_blips["Cave à champagne"].z, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
+					end
+
+					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Point de vente vin"].x,vigneron_blips["Point de vente vin"].y,vigneron_blips["Point de vente vin"].z, true) <= vigneron_blips["Point de vente vin"].distanceMarker then
+						DrawMarker(1,vigneron_blips["Point de vente vin"].x,vigneron_blips["Point de vente vin"].y,vigneron_blips["Point de vente vin"].z, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
+					end
+					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), vigneron_blips["Point de vente champagne"].x,vigneron_blips["Point de vente champagne"].y,vigneron_blips["Point de vente champagne"].z, true) <= vigneron_blips["Point de vente champagne"].distanceMarker then
+						DrawMarker(1,vigneron_blips["Point de vente champagne"].x,vigneron_blips["Point de vente champagne"].y,vigneron_blips["Point de vente champagne"].z, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
 					end
 				end
 			end
@@ -218,6 +241,31 @@ end)
 		end
 	end)
 
+	RegisterNetEvent('vigneron:drawGetChampagne')
+	AddEventHandler('vigneron:drawGetChampagne', function(qteVign, qteTraite2)
+		if(qteVign == nil) then
+			qteVign = 0
+		end
+
+		if(qteTraite2 == nil) then
+			qteTraite2 = 0
+		end
+
+		if qteTraite2 < 64 and qteVign > 0 then
+			TriggerEvent('player:looseItem',vigneron_ressourceBase, 1)
+			TriggerEvent('player:receiveItem',vigneron_ressourceTraite2, 1)
+			ClearPrints()
+			SetTextEntry_2("STRING")
+			AddTextComponentString("~g~Récupération des bouteilles de champagne")
+			DrawSubtitleTimed(4500, 1)
+		else
+			ClearPrints()
+			SetTextEntry_2("STRING")
+			AddTextComponentString("~r~Vous ne possedez plus de raisin")
+			DrawSubtitleTimed(2000, 1)
+		end
+	end)
+
 	RegisterNetEvent('vigneron:drawSellVin')
 	AddEventHandler('vigneron:drawSellVin', function (qte)
 		if(qte == nil) then
@@ -231,6 +279,28 @@ end)
 			ClearPrints()
 			SetTextEntry_2("STRING")
 			AddTextComponentString("~g~Vous avez vendu une bouteille de vin")
+			DrawSubtitleTimed(2000, 1)
+		else
+			ClearPrints()
+			SetTextEntry_2("STRING")
+			AddTextComponentString("~r~Vous n'avez plus de bouteille de vin")
+			DrawSubtitleTimed(2000, 1)
+		end
+	end)
+
+	RegisterNetEvent('vigneron:drawSellChampagne')
+	AddEventHandler('vigneron:drawSellChampagne', function (qte2)
+		if(qte2 == nil) then
+			qte2 = 0
+		end
+
+		if qte2 > 0 then
+			TriggerEvent('player:looseItem',vigneron_ressourceTraite2, 1)
+			local salaire = math.random(vigneron_pay.minimum, vigneron_pay.maximum)
+			TriggerServerEvent('mission:completed', salaire)
+			ClearPrints()
+			SetTextEntry_2("STRING")
+			AddTextComponentString("~g~Vous avez vendu une bouteille de champagne")
 			DrawSubtitleTimed(2000, 1)
 		else
 			ClearPrints()

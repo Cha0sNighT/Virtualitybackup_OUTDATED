@@ -64,9 +64,9 @@ brasseur_blips = {
 	},
 	["Point de vente"] = {
 		id=22,
-		x=141.320083618164,
-		y=-1277.92822265625,
-		z=28.1096794891357,
+		x=-423.73861694336,
+		y=-33.637935638428,
+		z=46.223743438721,
 		distanceBetweenCoords=10,
 		distanceMarker=15,
 		defaultTime=5000

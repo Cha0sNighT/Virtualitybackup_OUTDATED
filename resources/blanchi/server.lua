@@ -3,8 +3,10 @@ RegisterServerEvent('blanchi:transform')
 AddEventHandler('blanchi:transform', function ()
 	TriggerEvent('es:getPlayerFromId', source, function(user)
 			local sale = user:dirty_money
+			local pourcentage = math.random(75, 85)
+			local blanchi = math.floor(tonumber(sale) * pourcentage / 100)
 			if sale > 0 then
-				user:addMoney(tonumber(sale))
+				user:addMoney(tonumber(blanchi))
 				user:removeDirty_Money(tonumber(sale))
 			end
 				TriggerClientEvent('blanchi:drawTransform',source,sale)

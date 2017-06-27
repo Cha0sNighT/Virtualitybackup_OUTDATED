@@ -30,43 +30,43 @@ local TEXT = {
     QuitterService = '~INPUT_PICKUP~ Quitter son service de mécano',
     SpawnVehicle = '~INPUT_PICKUP~ Recuprer son véhicule de ~b~service',
     SpawnVehicleImpossible = '~R~ Impossible, aucune place disponible',
-    PasVehicule = "~r~Placez vous devant un véhicule",
-    CapotFerme = '~o~Ouvrez le capot du véhicule pour ne pas passer pour un guignol...',
-    VehiculeOK = '~g~Aucun problème',
-    VehiculeReparable = '~o~Le véhicule est endommagé, mais il est réparable sur place',
-    VehiculeKO = "~r~Véhicule HS, il doit être rapatrié dans un garage pour réparation",
+    PasVehicule = "~r~Placer vous devant un véhicule",
+    CapotFerme = '~o~Ouvrer le capot du véhicule pour ne pas passé pour un guignole...',
+    VehiculeOK = '~g~Aucun probleme',
+    VehiculeReparable = '~o~Le véhicule est endommager, mais il est réparable sur place',
+    VehiculeKO = "~r~Véhicule HS, il doit etre rapatrié dans un garage pour réparation",
     VehiculeReparationRapideOk = "~g~Le véhicule a subit une réparation d'apoint",
-    VehiculeReparationRapideKo = "~r~Le véhicule ne peut etre réparé sur place",
-    VehiculeReparationGarage = "~r~Ce type de réparation ne peut être fait ici",
+    VehiculeReparationRapideKo = "~r~Le véhicule ne peut etre réparer sur place",
+    VehiculeReparationGarage = "~r~Ce type de reparation ne peut etre fait ici",
     VehiculeReparationOk = '~g~Le véhicule est comme neuf',
     VehiculeDeverrouilleOk = '~g~Le véhicule est ouvert pour tous',
     VehiculeDeverrouilleKo = '~o~Quelque chose ne se passe pas comme prévu...',
     InfoGrue = '~g~E~s~ attache/Detache le véhicule\n~g~N+~s~ monter la grue\n~g~N-~s~ pour baisser la grue',
     InfoRemoqueAttach = '~g~E~s~ Attacher le véhicule',
     InfoRemoqueDettach = '~g~E~s~ Détacher le véhicule',
-    InfoRemoqueNo = 'Aucun véhicule à porté',
+    InfoRemoqueNo = 'Aucun véhicule a porté',
     Blip = 'Mission en cours',
-    BlipGarage = "Mécano",
+    BlipGarage = "Mecano",
     MissionCancel = 'Votre mission en cours n\'est plus d\'actualité',
-    MissionClientAccept = 'Un mécano a prit votre appel',
-    MissionClientCancel = 'Votre mécano vous a abandonné',
+    MissionClientAccept = 'Un mecano a prit votre appel',
+    MissionClientCancel = 'Votre mécano vous à abandonné',
     InfoMecanoNoAppel = '~g~Aucun appel en attente',
     InfoMecanoNbAppel = '~w~ Appel en attente',
     BlipMecanoService = 'Prise de service',
     BlipMecanoVehicle = 'Prise du véhicule de service',
 
-    CALL_INFO_NO_PERSONNEL = '~r~Aucun mécano en service',
+    CALL_INFO_NO_PERSONNEL = '~r~Aucun mecano en service',
     CALL_INFO_ALL_BUSY = '~o~Tous nos mécano sont occupés',
     CALL_INFO_WAIT = '~b~Votre appel est sur attente',
-    CALL_INFO_OK = '~g~Un mécano va arriver sur les lieux de l\'appel',
+    CALL_INFO_OK = '~g~Un mecano va arriver sur les lieux de l\'appel',
 
-    CALL_RECU = 'Confirmation\nVotre appel a été enregistré',
-    CALL_ACCEPT = 'Votre appel a été accepté, un mécano est en route',
-    CALL_CANCEL = 'Le mécano vient d\'abandonner votre appel',
+    CALL_RECU = 'Confirmation\nVotre appel à été enregistré',
+    CALL_ACCEPT = 'Votre appel a été accepté, un mecano est en route',
+    CALL_CANCEL = 'Le mecano vient d\'abandonné votre appel',
     CALL_FINI = 'Votre appel a été résolu',
     CALL_EN_COURS = 'Vous avez déjà une demande en cours ...',
 
-    MISSION_NEW = 'Un nouvel accident a été signalé, il a été ajouté dans votre liste de mission',
+    MISSION_NEW = 'Un nouveau accidents a été signalé, il y été ajouté dans votre liste de mission',
     MISSION_ACCEPT = 'Mission acceptée, mettez vous en route',
     MISSION_ANNULE = 'Votre client s\'est décommandé',
     MISSION_CONCURENCE = 'Vous étes plusieurs sur le coup',
@@ -249,9 +249,9 @@ local function drawHelpJobM()
         { text = '~o~Information Mécano', isTitle = true, isCenter = true},
         { text = '~g~Vous devez aider les citoyens à résoudre leurs problèmes de véhicules', isCenter = true, addY = 0.04},
         { text = ' - Prenez votre service et récupérez votre véhicule dans un garage'},
-        { text = ' - Lorsque qu\'un appel est lancé, prenez l\'appel et dirrigez vers le client'},
+        { text = ' - Lorsque qu\'un appel est lancé, prenez l\'appel et dirrigez vous faire le client'},
         { text = ' - Une fois sur place, analysez la situation et faite une réparation sur place si possible'},
-        { text = ' - Si cela est impossible, transportez le véhicule jusqu\'au garage le plus proche, pour une'},
+        { text = ' - Si cela est impossible, transporter le véhicule jusqu\'au garage le plus proche, pour une'},
         { text = '    réparation complète'},
         { text = ' - Facturez le client et rendez lui ses clefs'},
         { text = ' - Prévenez le centre d\'appels que la mission est terminée'},
@@ -261,17 +261,17 @@ local function drawHelpJobM()
         { text = '    toujours présents'},
         
         { text = '~g~Réparation complète: ~w~Seulement réalisable en garage, remet à neuf un véhicule'},
-        { text = '~g~Déverrouiller le véhicule: ~w~Débloque les portes du véhicule'},
+        { text = '~g~Déverrouillé le véhicule: ~w~Débloque les portes du véhicule'},
         { text = '~b~ Vos véhicules :', size = 0.4, addY = 0.04 },
-        { text = '~g~Le towtrunk ~w~Rapide et maniable, permet de transporter les voitures grâce à une grue'},
-        { text = '~g~Le flatbed ~w~Plus impossant, il permet de transporter tous types de véhicules', addY = 0.04},
+        { text = '~g~Le towtrunk ~w~Rapide et maniable, permet de transporté les voitures grace à une grue'},
+        { text = '~g~Le flatbed ~w~Plus impossant, il permet de transporté tous types de véhicules', addY = 0.04},
         { text = '~b~ Astuces :', size = 0.4, addY = 0.04 },
-        { text = '~g~Afficher / Cacher aide : ~w~Affiche ou cache la ligne d\'aide derrière votre véhicule qui signale'},
-        { text = '   le bon placement du véhicule à charger', addY = 0.04},
+        { text = '~g~Afficher / Cacher aide : ~w~Affiche ou cache la ligne d\'aide derriere votre véhicule qui signale'},
+        { text = '   le bon placement du véhicule à chargé', addY = 0.04},
         { text = '~c~Si vous ne pouvez pas charger le véhicule sur le flatbed ou que le cable saute pour le'},
         { text = '~c~towtrunk, déverrouillez le véhicule'},
-        { text = '~c~Si le cable s\'attache de l\'autre coté du véhicule, détachez et réattachez le', addY = 0.06},
-        { text = '~d~Si vous trouvez des problèmes, utilisez le forum pour nous les signaler', isCenter = true, addY = 0.06},
+        { text = '~c~Si le cable s\'attache de l\'autre coté du véhicule, détachez et réatachez le', addY = 0.06},
+        { text = '~d~Si vous trouvez des problemes, utilisez le forum pour nous les signaler', isCenter = true, addY = 0.06},
         { text = '~b~Merci & Bonne route', isCenter = true},
     }
     DrawRect(0.5, 0.5, 0.48, 0.9, 0,0,0, 225)
@@ -452,7 +452,7 @@ end
 local function CustomVehicleDommage()
     local myPed = GetPlayerPed(-1)
     local vehicle = GetVehiclePedIsIn(myPed, 0)
-    if vehicle ~= 0 then
+    if vehicle ~= 0 then 
         local engineHealth = GetVehicleEngineHealth(vehicle)
         local vehicleHealth = GetEntityHealth(vehicle)
         local petrolTankeHealth = GetVehiclePetrolTankHealth(vehicle)
@@ -464,29 +464,33 @@ local function CustomVehicleDommage()
         -- AddTextComponentString('~r~' .. math.floor(engineHealth) .. ' ~g~ ' .. vehicleHealth .. ' ~b~ ' .. math.floor(petrolTankeHealth) .. '\n~y~' .. vehicleHealth2 .. '\n~o~' .. t2)
         -- DrawSubtitleTimed(200, 1)
 
-        if engineHealth <= 150 then
+        if vehicleHealth <= 875 then
             SetVehicleEngineTorqueMultiplier(vehicle,0.09)
         end
-        if vehicleHealth <= 0 or
-           (engineHealth <= 900 and engineHealth > 151) or
-           petrolTankeHealth <= 900  or
-           vehicleHealth - 2000 + engineHealth + petrolTankeHealth <= 0 then
+		
+		 if vehicleHealth <= 840 then
             SetVehicleEngineHealth(vehicle, -1.0)
-            SetVehicleBodyHealth(0.0)
-            SetVehicleUndriveable(vehicle, true)
-        elseif (2100 - engineHealth - petrolTankeHealth - vehicleHealth2) >= 65 and engineHealth > 150 then
-            SetVehicleDoorOpen(vehicle, 4, 0, 0)
-            SetVehicleBodyHealth(vehicle, vehicleHealth + 2000 - engineHealth - petrolTankeHealth)
-            SetVehicleEngineHealth(vehicle, 150.0)
         end
-
+        -- if vehicleHealth <= 0 or 
+           -- (engineHealth <= 900 and engineHealth > 151) or 
+           -- petrolTankeHealth <= 900  or
+           -- vehicleHealth - 2000 + engineHealth + petrolTankeHealth <= 0 then   
+            -- SetVehicleEngineHealth(vehicle, -1.0)
+            -- SetVehicleBodyHealth(0.0)
+            -- SetVehicleUndriveable(vehicle, true)
+        -- elseif (2100 - engineHealth - petrolTankeHealth - vehicleHealth2) >= 65 and engineHealth > 150 then
+            -- SetVehicleDoorOpen(vehicle, 4, 0, 0)
+            -- SetVehicleBodyHealth(vehicle, vehicleHealth + 2000 - engineHealth - petrolTankeHealth)
+            -- SetVehicleEngineHealth(vehicle, 150.0)
+        -- end
+       
         -- local total = engineHealth + vehicleHealth + petrolTankeHealth
         -- if engineHealth >= 998 and petrolTankeHealth >= 998 then
         --     SetEntityHealth(vehicle, 1000)
         --     vehicleHealth = 1000
         -- end
         -- local bodyHealth = vehicleHealth
-
+        
         -- local t = (2000-engineHealth-petrolTankeHealth) + ((1000-vehicleHealth)/25)
         -- local t = GetVehicleDeformationAtPos(vehicle,1.21, 6.15, 0.3)
         -- t = (t.x * t.x + t.y * t.y + t.z * t.z) * 1000
@@ -506,14 +510,14 @@ local function CustomVehicleDommage()
         --         SetVehicleUndriveable(vehicle, true)
         --     end
         -- end
-        --[[ Debug Show Dommage
-        local t = math.floor(GetVehicleBodyHealth_2(vehicle))
-        local t2 = 2100 - engineHealth - petrolTankeHealth - t
-        ClearPrints()
-        SetTextEntry_2("STRING")
-        AddTextComponentString('~r~' .. math.floor(engineHealth) .. ' ~g~ ' .. vehicleHealth .. ' ~b~ ' .. math.floor(petrolTankeHealth) .. '\n~y~' .. t .. '\n~o~' .. t2)
-        DrawSubtitleTimed(200, 1)
-        --]]
+        --Debug Show Dommage 
+		
+        -- local t = math.floor(GetVehicleBodyHealth_2(vehicle))
+        -- local t2 = 2100 - engineHealth - petrolTankeHealth - t
+        -- ClearPrints()
+        -- SetTextEntry_2("STRING")
+        -- AddTextComponentString('~r~' .. math.floor(engineHealth) .. ' ~g~ ' .. vehicleHealth .. ' ~b~ ' .. math.floor(petrolTankeHealth) .. '\n~y~' .. t .. '\n~o~' .. t2)
+        -- DrawSubtitleTimed(200, 1)
     end
 end
 
@@ -906,7 +910,7 @@ end
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
---        CustomVehicleDommage()
+        CustomVehicleDommage()
         if isMecano then
             gestionService()
             jobsSystem()
@@ -1115,7 +1119,7 @@ AddEventHandler('mecano:openMenu', function()
         TriggerServerEvent('mecano:requestMission')
         openMenuGeneral()
     else
-        showMessageInformation("~r~Vous devez etre en service pour acceder au menu")
+        showMessageInformation("~r~Vous devais etre en service pour accedez au menu")
     end
 end)
 
@@ -1181,11 +1185,11 @@ function MECANO_deleteVehicle()
             local vehicle = GetVehiclePedIsIn( ped, false )
 
             if ( GetPedInVehicleSeat( vehicle, -1 ) == ped ) then 
-                ShowNotification( "Vehicle supprimé." )
+                ShowNotification( "Vehicle deleted." )
                 SetEntityAsMissionEntity( vehicle, true, true )
                 deleteCar( vehicle )
             else 
-                ShowNotification( "Vous devez être sur le siège conducteur!" )
+                ShowNotification( "You must be in the driver's seat!" )
             end 
         else
             local playerPos = GetEntityCoords( ped, 1 )
@@ -1194,11 +1198,11 @@ function MECANO_deleteVehicle()
 
             if ( DoesEntityExist( vehicle ) ) then 
                 -- log( "Distance between ped and vehicle: " .. tostring( GetDistanceBetween( ped, vehicle ) ) )
-                ShowNotification( "Vehicle supprimé." )
+                ShowNotification( "Vehicle deleted." )
                 SetEntityAsMissionEntity( vehicle, true, true )
                 deleteCar( vehicle )
             else 
-                ShowNotification( "Vous devez être proche d'un véhicule pour le suppimer." )
+                ShowNotification( "You must be in or near a vehicle to delete it." )
             end 
         end 
     end 
