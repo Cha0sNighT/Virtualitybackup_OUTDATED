@@ -40,5 +40,7 @@ AddEventHandler('sendDarknetMessage', function(id, name, message)
 		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. message)
 	elseif MineGetPlayerJobID(monid) ~= 2 then
 		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. message)
+	elseif 	MineGetPlayerJobID(monid) == 2 and isCopInService == false then
+		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. message)
 	end
 end)
