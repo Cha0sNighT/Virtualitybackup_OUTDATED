@@ -30,3 +30,19 @@ AddEventHandler('sendProximityMessageDo', function(id, name, message)
 		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^6((" .. name .."))  ".."  " .. message)
 	end
 end)
+
+RegisterNetEvent('sendDarknetMessage')
+AddEventHandler('sendDarknetMessage', function(id, name, message)
+	local monid = PlayerId()
+	local sonid = GetPlayerFromServerId(id)
+	local copInService = exports.metiers:getIsInService()
+	local mess = ""
+	if(copInService) then
+		mess = "************"
+	else
+		mess = message
+	end
+
+	TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ^1 ".."  " .. mess)
+
+end)

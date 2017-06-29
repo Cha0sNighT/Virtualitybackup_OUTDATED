@@ -34,7 +34,10 @@ end)
 -- DARKNET
 TriggerEvent('es:addCommand', 'darknet', function(source, args, user)
   table.remove(args, 1)
-  TriggerClientEvent('chatMessage', -1, "^5[DARKNET]", {255, 0, 0}, "".. table.concat(args, " "))
+  local pname = GetPlayerName(source)
+  TriggerClientEvent('sendDarknetMessage', -1, source, pname, table.concat(args, " "))
+end, function(source, args, user)
+	TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Insufficienct permissions!")
 end)
 
 -- ANNONCE
