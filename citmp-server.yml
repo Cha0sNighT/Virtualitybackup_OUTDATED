@@ -60,6 +60,8 @@ AutoStartResources:
     - Jail
     - lscustoms
     - deleteveh
+    - Coffeemachine
+    - nocarjack
 
 # do change
 RconPassword: 
