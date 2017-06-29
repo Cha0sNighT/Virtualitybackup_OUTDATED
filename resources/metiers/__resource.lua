@@ -71,7 +71,4 @@ server_script {
 	-- 'brasseur/brasseur_config.lua',
 }
 
-export {
-	'getIsInService',
-	'MineGetPlayerJobID'
-}
+export 'getIsInService'

@@ -36,12 +36,14 @@ RegisterNetEvent('sendDarknetMessage')
 AddEventHandler('sendDarknetMessage', function(id, name, message)
 	local monid = PlayerId()
 	local sonid = GetPlayerFromServerId(id)
-	-- if sonid == monid then
-	--	TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. message)
---    else
-    if MineGetPlayerJobID(monid) ~= 2 then
-		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. message)
-	elseif 	MineGetPlayerJobID(monid) == 2 and isCopInService == false then
-		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. message)
+	local copInService = exports.metiers:getIsInService()
+	local mess = ""
+	if(copInService) then
+		mess = "************"
+	else
+		mess = message
 	end
+
+	TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. mess)
+
 end)
