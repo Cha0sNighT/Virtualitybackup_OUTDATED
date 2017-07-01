@@ -128,6 +128,7 @@ itemMenuChoixPoliceService = {
     ['Items'] = {
         {['Title'] = 'Prendre le service', ['Function'] = takeService},
         {['Title'] = 'Prendre le service ( Investigation ) ', ['Function'] = takeServiceInvestigation},
+        {['Title'] = 'Prendre le service ( Invervention )', ['Function'] = takeServiceIntervention},
         {['Title'] = 'Mettre le gillet par balles', ['Function'] = equipeVest, type = 'Bulletproof jacket'},
         {['Title'] = 'Retirer le giller par balles', ['Function'] = equipeVest, type = 'Take offbulletproof jacket'},
         {['Title'] = "Mettre chasuble jaune", ['Function'] = equipeVest, type = 'High-visibility clothing'},
