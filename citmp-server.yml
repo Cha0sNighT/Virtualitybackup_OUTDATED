@@ -66,6 +66,7 @@ AutoStartResources:
     - nocarjack
     - Hospital
     - spikes
+    - gcphone
 
 # do change
 RconPassword: 
