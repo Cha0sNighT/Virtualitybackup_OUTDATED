@@ -71,7 +71,6 @@ function giveUniforme()
 		Citizen.Wait(500)
 		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_NIGHTSTICK"), true, true)
 		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_STUNGUN"), true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_PETROLCAN"), true, true)
 
 	end)
 end
@@ -105,38 +104,6 @@ function takeServiceInvestigation()
 	GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_STUNGUN"), true, true)
 	drawNotification("Vous etes en Service")
 end
-
-function takeServiceIntervention()
-	ServiceOn()
-	TriggerServerEvent("police:setService",true)
-	Citizen.CreateThread(function()
-
-		local model = GetHashKey("s_m_y_swat_01")
-
-		RequestModel(model)
-		while not HasModelLoaded(model) do
-			RequestModel(model)
-			Citizen.Wait(0)
-		end
-
-		SetPlayerModel(PlayerId(), model)
-		SetModelAsNoLongerNeeded(model)
-
-		RemoveAllPedWeapons(GetPlayerPed(-1), true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_PISTOL50"), 150, true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_STUNGUN"), true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_NIGHTSTICK"), true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_ASSAULTSHOTGUN"), 150, true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_BZGas"), 150, true, true)
-		Citizen.Wait(500)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_CarbineRifle"), 150, true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_HEAVYSNIPER"), 150, true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_FLASHLIGHT"), true, true)
-		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_SMOKEGRENADE"), 150, true, true)
-	end)
-	drawNotification("Vous etes en service")
-end
-
 
 function finishService()
     ServiceOff()
