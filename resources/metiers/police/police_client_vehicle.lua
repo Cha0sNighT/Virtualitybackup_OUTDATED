@@ -37,13 +37,13 @@ local policeveh = {
 	dilettante2 = { x = 463.3115, y = -1019.43, z = 27.84 , h = 90.02},
 	police3 = { x = 463.3115, y = -1019.43, z = 27.84 , h = 90.02},
 	police2 = { x = 463.3115, y = -1019.43, z = 27.84 , h = 90.02},
-	police = { x = 463.3115, y = -1019.43, z = 27.84 , h = 90.02},
+	police7 = { x = 463.3115, y = -1019.43, z = 27.84 , h = 90.02},
 	sheriff = { x = 463.3115, y = -1019.43, z = 27.84 , h = 90.02},
 	policeb = { x = 463.5075, y = -1014.99, z = 27.5485, h = 90.23},
 	scorcher = { x = 463.5075, y = -1014.99, z = 27.5485, h = 90.23},
 	policet = { x = 436.1801, y = -996.90, z = 25.74, h = 182,05},
-	sheriff2 = { x = 436.1801, y = -996.90, z = 25.74, h = 182,05},
-	police4 = { x = 431.47, y = -997.245, z = 25.36, h = 178.83},
+	police5 = { x = 436.1801, y = -996.90, z = 25.74, h = 182,05},
+	fbi = { x = 431.47, y = -997.245, z = 25.36, h = 178.83},
 	riot = { x = 436.48013305664, y = -1019.2044677734, z = 28.799287796021 , h = 90.02},
 	pbus = { x = 436.48013305664, y = -1019.2044677734, z = 28.799287796021 , h = 90.02},
 }
@@ -79,9 +79,9 @@ function POLICE_SpanwVehicleCar(data)
         local veh = CreateVehicle(hash,pos.x,pos.y,pos.z,pos.h,true,false)
 		local plate = math.random(100, 900)
 		SetVehicleNumberPlateText(veh, "LSPD"..plate.." ")
-		SetVehicleMod(veh, 11, 2, false)
-		SetVehicleMod(veh, 12, 2, false)
-		SetVehicleMod(veh, 13, 2, false)
+		SetVehicleMod(veh, 11, 4)
+		SetVehicleMod(veh, 12, 4)
+		SetVehicleMod(veh, 13, 4)
 		SetVehicleEnginePowerMultiplier(veh, 12.0)
 
         --FreezeEntityPosition(veh,true)

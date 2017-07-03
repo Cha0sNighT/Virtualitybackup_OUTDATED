@@ -38,30 +38,30 @@ function giveUniforme()
 	Citizen.CreateThread(function()
 		TriggerServerEvent("police:setService",true)
 		if(GetEntityModel(GetPlayerPed(-1)) == hashSkin) then
-			
+
 			SetPedPropIndex(GetPlayerPed(-1), 1, 5, 0, 2)             --Lunette Soleil
 			SetPedPropIndex(GetPlayerPed(-1), 2, 0, 0, 2)             --Ecouteur Bluetooh
 			SetPedComponentVariation(GetPlayerPed(-1), 11, 55, 0, 2)  --Chemise Police
-			SetPedComponentVariation(GetPlayerPed(-1), 8, 58, 0, 2)   --Ceinture+matraque Police 
+			SetPedComponentVariation(GetPlayerPed(-1), 8, 58, 0, 2)   --Ceinture+matraque Police
 			SetPedComponentVariation(GetPlayerPed(-1), 4, 35, 0, 2)   --Pantalon Police
 			SetPedComponentVariation(GetPlayerPed(-1), 6, 24, 0, 2)   --Chaussure Police
 			SetPedComponentVariation(GetPlayerPed(-1), 10, 8, 0, 2)   --grade 0
 			SetPedComponentVariation(GetPlayerPed(-1), 3, 0, 0, 2)   -- under skin
-			
+
 		else
 
 			SetPedPropIndex(GetPlayerPed(-1), 1, 11, 3, 2)           --Lunette Soleil
 			SetPedPropIndex(GetPlayerPed(-1), 2, 0, 0, 2)            --Ecouteur Bluetooh
 			SetPedComponentVariation(GetPlayerPed(-1), 3, 14, 0, 2)  --Tshirt non bug
 			SetPedComponentVariation(GetPlayerPed(-1), 11, 48, 0, 2) --Chemise Police
-			SetPedComponentVariation(GetPlayerPed(-1), 8, 35, 0, 2)  --Ceinture+matraque Police 
+			SetPedComponentVariation(GetPlayerPed(-1), 8, 35, 0, 2)  --Ceinture+matraque Police
 			SetPedComponentVariation(GetPlayerPed(-1), 4, 34, 0, 2)  --Pantalon Police
 			SetPedComponentVariation(GetPlayerPed(-1), 6, 29, 0, 2)  -- Chaussure Police
 			SetPedComponentVariation(GetPlayerPed(-1), 10, 7, 0, 2)  --grade 0
 			SetPedComponentVariation(GetPlayerPed(-1), 3, 0, 0, 2)   -- under skin
-		
+
 		end
-		
+
 		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_PISTOL50"), 150, true, true)
 		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_PUMPSHOTGUN"), 150, true, true)
 		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_FLARE"), 150, true, true)
@@ -71,7 +71,7 @@ function giveUniforme()
 		Citizen.Wait(500)
 		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_NIGHTSTICK"), true, true)
 		GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_STUNGUN"), true, true)
-		
+
 	end)
 end
 
@@ -79,7 +79,7 @@ function removeUniforme()
 	Citizen.CreateThread(function()
 		TriggerServerEvent("police:setService",false)
 		TriggerServerEvent("skin_customization:SpawnPlayer")
-		SetPedComponentVariation(GetPlayerPed(-1), 9, 0, 1, 2)  
+		SetPedComponentVariation(GetPlayerPed(-1), 9, 0, 1, 2)
 		RemoveAllPedWeapons(GetPlayerPed(-1))
 	end)
 end
@@ -107,14 +107,14 @@ end
 
 function finishService()
     ServiceOff()
-    removeUniforme()                                          
+    removeUniforme()
     drawNotification("Service Terminé")
 end
 
 RegisterNetEvent('police:finishService')
 AddEventHandler('police:finishService', function()
 	ServiceOff()
-    removeUniforme()  
+    removeUniforme()
 end)
 
 function drawNotification(text)

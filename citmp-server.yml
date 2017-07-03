@@ -20,6 +20,9 @@ AutoStartResources:
     - banking
     - essence
     - es_admin
+    - FBI
+    - Sheriff
+    - LSPD
     - gb_vocal
     - neverwanted
     - vehcontrol
@@ -46,7 +49,6 @@ AutoStartResources:
     - indicators
     - carwash
     - es_holdup
-    - phone
     - gcillegal
     - es_weashop
     - clotheshop
@@ -60,12 +62,16 @@ AutoStartResources:
     - Jail
     - lscustoms
     - deleteveh
+    - Coffeemachine
+    - nocarjack
+    - Hospital
+    - spikes
 
 # do change
 RconPassword: 
 
 # configure this, please
-Hostname: Virtuality 2.5 | WHITELIST | EN DEV
+Hostname: Virtuality 2.5 | DEVSERV
 
 # don't change this, it'll cause your server to be unlisted
 Game: GTA5
@@ -77,13 +83,13 @@ ScriptDebug: true
 DebugLog: true
 
 # set to false to hide from the online server list
-Announce: true
+Announce: false
 
 # set to false to require players to be signed in to Steam
 DisableAuth: false
 
 # set to true to disable local script hook plugins
-DisableScriptHook: true
+DisableScriptHook: false
 
 # set to the path of an icon to use in the server browser. it should be square.
 ServerIcon: hello.png

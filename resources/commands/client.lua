@@ -31,7 +31,6 @@ AddEventHandler('sendProximityMessageDo', function(id, name, message)
 	end
 end)
 
-------- Specific Darknet send message (without cops)
 RegisterNetEvent('sendDarknetMessage')
 AddEventHandler('sendDarknetMessage', function(id, name, message)
 	local monid = PlayerId()
@@ -44,6 +43,6 @@ AddEventHandler('sendDarknetMessage', function(id, name, message)
 		mess = message
 	end
 
-	TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ".."  " .. mess)
+	TriggerEvent('chatMessage', "", {255, 0, 0}, " ^5[DARKNET] ^1 ".."  " .. mess)
 
 end)
