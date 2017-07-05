@@ -67,6 +67,7 @@ AutoStartResources:
     - Hospital
     - spikes
     - gcphone
+    - autoecole
 
 # do change
 RconPassword: 
