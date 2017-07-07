@@ -19,9 +19,10 @@ files {
 	"gui/ambulancier.png",
 	"gui/mecano.png",
 	"gui/taxi.png",
-	"gui/avocat.png",
+	"gui/maire.png",
 	"gui/gang.png",
 	"gui/foodtruck.png",
+	"gui/facteur.png",
 }
 
 client_script {
@@ -34,11 +35,11 @@ client_script {
 	'pecheur/pecheur_config.lua',
 	'vigneron/vigneron_config.lua',
 	'brasseur/brasseur_config.lua',
-	'police/police_client.lua',
-    'police/police_client_vehicle.lua',
-    'police/police_client_veset.lua',
-    'police/police_client_notif.lua',
-    'police/police_Menu.lua',
+	--'police/police_client.lua',
+  --'police/police_client_vehicle.lua',
+  --'police/police_client_veset.lua',
+  --'police/police_client_notif.lua',
+  --'police/police_Menu.lua',
 	'poleemploi/metiers_client.lua',
 	'chomeur/chomeur_client.lua',
 	'fermier/fermier_client.lua',
@@ -47,8 +48,8 @@ client_script {
 	'pecheur/pecheur_client.lua',
 	'vigneron/vigneron_client.lua',
 	'brasseur/brasseur_client.lua',
-	'avocat/avocat_config.lua',
-	'avocat/avocat_client.lua',
+	'maire/maire_config.lua',
+	'maire/maire_client.lua',
 	'mecano/mecano_client.lua',
 	'mecano/mecano_Menu.lua',
 }
@@ -57,8 +58,8 @@ server_script {
 	'../essentialmode/config.lua',
 	'poleemploi/metiers_server.lua',
 	'chomeur/chomeur_server.lua',
-	'police/police_server.lua',
-    'police/police_server_notif.lua',
+	--'police/police_server.lua',
+   -- 'police/police_server_notif.lua',
 	'fermier/fermier_server.lua',
 	'bucheron/bucheron_server.lua',
 	'mineur/mineur_server.lua',
@@ -67,8 +68,9 @@ server_script {
 	'vigneron/vigneron_server.lua',
 	'brasseur/brasseur_config.lua',
 	'brasseur/brasseur_server.lua',
-	'avocat/avocat_server.lua',
+	'maire/maire_server.lua',
 	'mecano/mecano_server.lua',
 }
 
 export 'getIsInService'
+dependency 'coffre'
