@@ -686,6 +686,7 @@ function POLICE_Fines(amount, reason)
 	t, distance = GetClosestPlayer()
 	if(distance ~= -1 and distance < 3) then
 		TriggerServerEvent("police:finesGranted", GetPlayerServerId(t), amount, reason)
+        TriggerServerEvent("coffrelspd:amendecoffre", amount)
 	else
 		TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Pas de joueur proche!")
 	end
