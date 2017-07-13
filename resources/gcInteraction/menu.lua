@@ -134,11 +134,11 @@ Menu.item = {
                     ['Items'] = {
                         { ['Title'] = 'f_blow_job_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'f_blow_job_loop' },
                         { ['Title'] = 'm_blow_job_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'm_blow_job_loop' },
-                        { ['Title'] = 'start_engine', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine' },
-                        { ['Title'] = 'start_engine_enter', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine_enter' },
-                        { ['Title'] = 'start_engine_exit', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine_exit' },
-                        { ['Title'] = 'start_engine_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine_loop' },
-                        { ['Title'] = 'thanks_male_04', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'thanks_male_04' },
+                        { ['Title'] = 'walk', ['Function'] = playAmination, ['dictionaries'] = "move_f@sexy", ['clip'] = 'walk' },
+                        { ['Title'] = 'walk', ['Function'] = playAmination, ['dictionaries'] = "move_f@sexy@a", ['clip'] = 'walk' },
+                        { ['Title'] = 'idle', ['Function'] = playAmination, ['dictionaries'] = "move_f@sexy@a", ['clip'] = 'idle' },
+                        { ['Title'] = 'low_car_sex_to_prop_p2_female', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexlow_veh_first_person", ['clip'] = 'low_car_sex_to_prop_p2_female' },
+                        { ['Title'] = 'low_car_bj_loop_female', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexlow_veh_first_person", ['clip'] = 'low_car_bj_loop_female' },
                         { ['Title'] = 'yacht_ld_f', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@assassinate@multi@yachttarget@lapdance", ['clip'] = 'yacht_ld_f' },
                     }
                 }},
