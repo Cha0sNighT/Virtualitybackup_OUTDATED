@@ -129,6 +129,19 @@ Menu.item = {
 						{ ['Title'] = 'Portable', ['Function'] = playEmote, ['EmoteName'] = 'WORLD_HUMAN_STAND_MOBILE' },
                     }
                 }},
+                { ['Title'] = 'Spécials', ['SubMenu'] = {
+                    ['Title'] = 'Animations - Spéciale',
+                    ['Items'] = {
+                        { ['Title'] = 'f_blow_job_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'f_blow_job_loop' },
+                        { ['Title'] = 'm_blow_job_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'm_blow_job_loop' },
+                        { ['Title'] = 'start_engine', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine' },
+                        { ['Title'] = 'start_engine_enter', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine_enter' },
+                        { ['Title'] = 'start_engine_exit', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine_exit' },
+                        { ['Title'] = 'start_engine_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'start_engine_loop' },
+                        { ['Title'] = 'thanks_male_04', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'thanks_male_04' },
+                        { ['Title'] = 'yacht_ld_f', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@assassinate@multi@yachttarget@lapdance", ['clip'] = 'yacht_ld_f' },
+                    }
+                }},
 				{ ['Title'] = 'Metier', ['SubMenu'] = {
 					['Title'] = 'Animations Metier',
 					['Items'] = {
