@@ -132,23 +132,13 @@ Menu.item = {
                 { ['Title'] = 'Spécials', ['SubMenu'] = {
                     ['Title'] = 'Animations - Spéciale',
                     ['Items'] = {
-                        { ['Title'] = 'f_blow_job_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'f_blow_job_loop' },
-                        { ['Title'] = 'm_blow_job_loop', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'm_blow_job_loop' },
-                        { ['Title'] = 'bj_loop_male', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexnorm_veh", ['clip'] = 'bj_loop_male' },
-                        { ['Title'] = 'bj_loop_prostitute', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexnorm_veh", ['clip'] = 'bj_loop_prostitute' },
-                        { ['Title'] = 'sex_loop_male', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexnorm_veh", ['clip'] = 'sex_loop_male' },
-                        { ['Title'] = 'sex_loop_prostitute', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexnorm_veh", ['clip'] = 'sex_loop_prostitute' },
-                        { ['Title'] = 'low_car_bj_loop_female', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexlow_veh", ['clip'] = 'low_car_bj_loop_female' },
-                        { ['Title'] = 'low_car_bj_loop_player', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexlow_veh", ['clip'] = 'low_car_bj_loop_player' },
-                        { ['Title'] = 'low_car_sex_loop_female', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexlow_veh", ['clip'] = 'low_car_sex_loop_female' },
-                        { ['Title'] = 'low_car_sex_loop_player', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexlow_veh", ['clip'] = 'low_car_sex_loop_player' },
-                        { ['Title'] = 'yacht_ld_f', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@assassinate@multi@yachttarget@lapdance", ['clip'] = 'yacht_ld_f' },
-                        { ['Title'] = '001443_01_trvs_28_idle_stripper', ['Function'] = playAmination, ['dictionaries'] = "switch@trevor@mocks_lapdance", ['clip'] = '001443_01_trvs_28_idle_stripper' },
-                        { ['Title'] = 'ld_girl_a_song_a_p3_f', ['Function'] = playAmination, ['dictionaries'] = "mini@strip_club@lap_dance@ld_girl_a_song_a_p3", ['clip'] = 'ld_girl_a_song_a_p3_f' },
-                        { ['Title'] = 'ld_girl_a_song_a_p3_m', ['Function'] = playAmination, ['dictionaries'] = "mini@strip_club@lap_dance@ld_girl_a_song_a_p3", ['clip'] = 'ld_girl_a_song_a_p3_m' },
-                        { ['Title'] = 'ld_2g_p1_cam', ['Function'] = playAmination, ['dictionaries'] = "mini@strip_club@lap_dance_2g@ld_2g_p1", ['clip'] = 'ld_2g_p1_cam' },
-                        { ['Title'] = 'lap_dance_girl', ['Function'] = playAmination, ['dictionaries'] = "mp_am_stripper", ['clip'] = 'lap_dance_girl' },
-                        { ['Title'] = 'lap_dance_player', ['Function'] = playAmination, ['dictionaries'] = "mp_am_stripper", ['clip'] = 'lap_dance_player' },
+                        { ['Title'] = 'pipe homme', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@towing", ['clip'] = 'm_blow_job_loop' },
+                        { ['Title'] = 'pipe femme', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexnorm_veh", ['clip'] = 'bj_loop_prostitute' },
+                        { ['Title'] = 'relation sexuelle homme', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexnorm_veh", ['clip'] = 'sex_loop_male' },
+                        { ['Title'] = 'relation sexuelle homme', ['Function'] = playAmination, ['dictionaries'] = "mini@prostitutes@sexnorm_veh", ['clip'] = 'sex_loop_prostitute' },
+                        { ['Title'] = 'lap dance girl', ['Function'] = playAmination, ['dictionaries'] = "oddjobs@assassinate@multi@yachttarget@lapdance", ['clip'] = 'yacht_ld_f' },
+                        { ['Title'] = 'lap dance girl 2', ['Function'] = playAmination, ['dictionaries'] = "mp_am_stripper", ['clip'] = 'lap_dance_girl' },
+                        { ['Title'] = 'lap dance player', ['Function'] = playAmination, ['dictionaries'] = "mp_am_stripper", ['clip'] = 'lap_dance_player' },
                     }
                 }},
 				{ ['Title'] = 'Metier', ['SubMenu'] = {
@@ -186,11 +176,11 @@ Menu.tileBackgroundColor = { 255,255,255, 255 }
 Menu.textColor = { 255,255,255,255 }
 Menu.textColorActive = { 255,255,255, 255 }
 
-Menu.keyOpenMenu = 170 -- F3    
+Menu.keyOpenMenu = 170 -- F3
 Menu.keyUp = 172 -- PhoneUp
 Menu.keyDown = 173 -- PhoneDown
-Menu.keyLeft = 174 -- PhoneLeft || Not use next release Maybe 
-Menu.keyRight =	175 -- PhoneRigth || Not use next release Maybe 
+Menu.keyLeft = 174 -- PhoneLeft || Not use next release Maybe
+Menu.keyRight =	175 -- PhoneRigth || Not use next release Maybe
 Menu.keySelect = 176 -- PhoneSelect
 Menu.KeyCancel = 177 -- PhoneCancel
 
@@ -223,14 +213,14 @@ function Menu.initText(textColor, font, scale)
     SetTextEntry("STRING")
 end
 
-function Menu.draw() 
+function Menu.draw()
     -- Draw Rect
     local pos = 0
     local menu = Menu.getCurrentMenu()
     local selectValue = Menu.currentPos[#Menu.currentPos]
     local nbItem = #menu.Items
     -- draw background title & title
-    Menu.drawRect(Menu.posX, Menu.posY , Menu.ItemWidth, Menu.ItemHeight * 2, Menu.tileBackgroundColor)    
+    Menu.drawRect(Menu.posX, Menu.posY , Menu.ItemWidth, Menu.ItemHeight * 2, Menu.tileBackgroundColor)
     Menu.initText(Menu.tileTextColor, 4, 0.7)
     AddTextComponentString(menu.Title)
     DrawText(Menu.posX + Menu.ItemWidth/2, Menu.posY)
@@ -248,7 +238,7 @@ function Menu.draw()
         AddTextComponentString(value.Title)
         DrawText(Menu.posX + Menu.ItemWidth/2, Menu.posY + Menu.ItemHeight * (pos+1))
     end
-    
+
 end
 
 function Menu.getCurrentMenu()
@@ -264,31 +254,31 @@ function Menu.initMenu()
     for i,v in ipairs(Menu.item.Items)do
             if( v['Title'] == 'Ambulancier')then
                 table.remove(Menu.item.Items,i)
-                
+
             end
     end
     TriggerEvent("ambulancier:menu")
     Menu.currentPos = {1}
-    
+
 end
 
 function Menu.keyControl()
-    if IsControlJustPressed(1, Menu.keyDown) then 
+    if IsControlJustPressed(1, Menu.keyDown) then
         local cMenu = Menu.getCurrentMenu()
         local size = #cMenu.Items
         local slcp = #Menu.currentPos
         Menu.currentPos[slcp] = (Menu.currentPos[slcp] % size) + 1
 
-    elseif IsControlJustPressed(1, Menu.keyUp) then 
+    elseif IsControlJustPressed(1, Menu.keyUp) then
         local cMenu = Menu.getCurrentMenu()
         local size = #cMenu.Items
         local slcp = #Menu.currentPos
         Menu.currentPos[slcp] = ((Menu.currentPos[slcp] - 2 + size) % size) + 1
 
-    elseif IsControlJustPressed(1, Menu.KeyCancel) then 
+    elseif IsControlJustPressed(1, Menu.KeyCancel) then
         table.remove(Menu.currentPos)
         if #Menu.currentPos == 0 then
-            Menu.isOpen = false 
+            Menu.isOpen = false
         end
 
     elseif IsControlJustPressed(1, Menu.keySelect)  then
