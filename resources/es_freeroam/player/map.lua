@@ -75,6 +75,7 @@ local blips = {
     -- {name="Casino", id=207, x=925.329, y=46.152, z=80.908 },
     -- {name="Maze Bank Arena", id=135, x=-250.604, y=-2030.000, z=30.000},
     {name="Vanilla Unicorn", id=93, x=134.476, y=-1307.887, z=28.983},
+    {name="Bahama Mamas", id=121, x=-1378.180, y=-595.530, z=28.983},
     -- {name="Smoke on the Water", id=140, x=-1171.42, y=-1572.72, z=3.6636},
     -- {name="Weed Farm", id=140, x=2208.777, y=5578.235, z=53.735},
     -- {name="Downtown Cab Co", id=375, x=900.461, y=-181.466, z=73.89},
