@@ -68,10 +68,9 @@ AutoStartResources:
     - spikes
     - gcphone
     - autoecole
-    - police
 
 # do change
-RconPassword: toto
+RconPassword: 
 
 # configure this, please
 Hostname: Virtuality 2.5 | DEVSERV
@@ -86,7 +85,7 @@ ScriptDebug: true
 DebugLog: true
 
 # set to false to hide from the online server list
-Announce: false
+Announce: true
 
 # set to false to require players to be signed in to Steam
 DisableAuth: false
