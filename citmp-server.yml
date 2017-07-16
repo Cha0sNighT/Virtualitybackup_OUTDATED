@@ -68,9 +68,10 @@ AutoStartResources:
     - spikes
     - gcphone
     - autoecole
+    - police
 
 # do change
-RconPassword: 
+RconPassword: toto
 
 # configure this, please
 Hostname: Virtuality 2.5 | DEVSERV
