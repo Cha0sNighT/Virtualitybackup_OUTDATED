@@ -19,15 +19,15 @@ Menu = {}
 Menu.item = {
     ['Title'] = 'Magasin',
     ['Items'] = {
-    {['Title'] = 'Sandwich 20$', ['Event'] = 'food:selection',['itemid']=30,['price']=20,['Close']= false},
-    {['Title'] = 'Tacos 20$', ['Event'] = 'food:selection',['itemid']=34,['price']=20,['Close']= false},
-    {['Title'] = 'Burritos 20$', ['Event'] = 'food:selection',['itemid']=36,['price']=20,['Close']= false},
-    {['Title'] = 'Tortas 20$', ['Event'] = 'food:selection',['itemid']=37,['price']=20,['Close']= false},
-    {['Title'] = 'Quesadillas 20$', ['Event'] = 'food:selection',['itemid']=38,['price']=20,['Close']= false},
-    {['Title'] = 'Tostadas 20$', ['Event'] = 'food:selection',['itemid']=39,['price']=20,['Close']= false},
-    {['Title'] = 'Eau 15$', ['Event'] = 'food:selection',['itemid']=6,['price']=15,['Close']= false},
-    {['Title'] = 'Sprunk 15$', ['Event'] = 'food:selection',['itemid']=40,['price']=15,['Close']= false},
-    {['Title'] = 'Coca 15$', ['Event'] = 'food:selection',['itemid']=35,['price']=15,['Close']= false}
+    {['Title'] = 'Sandwich 50$', ['Event'] = 'food:selection',['itemid']=30,['price']=50,['Close']= false},
+    {['Title'] = 'Tacos 100$', ['Event'] = 'food:selection',['itemid']=34,['price']=100,['Close']= false},
+    {['Title'] = 'Burritos 100$', ['Event'] = 'food:selection',['itemid']=36,['price']=100,['Close']= false},
+    {['Title'] = 'Tortas 100$', ['Event'] = 'food:selection',['itemid']=37,['price']=100,['Close']= false},
+    {['Title'] = 'Quesadillas 100$', ['Event'] = 'food:selection',['itemid']=38,['price']=100,['Close']= false},
+    {['Title'] = 'Tostadas 100$', ['Event'] = 'food:selection',['itemid']=39,['price']=100,['Close']= false},
+    {['Title'] = 'Eau 40$', ['Event'] = 'food:selection',['itemid']=6,['price']=40,['Close']= false},
+    {['Title'] = 'Sprunk 75$', ['Event'] = 'food:selection',['itemid']=40,['price']=75,['Close']= false},
+    {['Title'] = 'Coca 75$', ['Event'] = 'food:selection',['itemid']=35,['price']=75,['Close']= false}
     }
 }
 --====================================================================================

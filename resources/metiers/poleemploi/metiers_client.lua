@@ -12,6 +12,7 @@
 			{name="Pecheur", id=10},
 			{name="Brasseur", id=12},
 			{name="Vigneron", id=13},
+			{name="Facteur", id=19},
 			--{name="Ambulancier", id=15},
 			--{name="Mecano", id=16},
 			--{name="Taxi", id=17}

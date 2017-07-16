@@ -5,9 +5,9 @@ vigneron_ressourceTraite2="42" -- Champagne
 
 vigneron_car = {
 	id=22,
-	x=-1905.90209960938,
-	y=2021.14147949219,
-	z=140.090008544922
+	x=-1894.6697998047,
+	y=2024.1374511719,
+	z=139.74749755859
 }
 
 vigneron_pay = {

@@ -1,5 +1,5 @@
 require "resources/essentialmode/lib/MySQL"
-MySQL:open("localhost", "gta5_gamemode_essential", "root", "")
+MySQL:open("localhost", "gta5_gamemode_essential", "root", "ntrs1q")
 
 RegisterServerEvent("Coffee_Server")
 AddEventHandler("Coffee_Server", function()

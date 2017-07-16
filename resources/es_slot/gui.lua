@@ -239,8 +239,8 @@ end)
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
-	if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), -1688.408203125,-1073.66748046875,13.1521692276001, true) <= 2 then
-		DrawMarker(1,-1688.408203125,-1073.66748046875,13.1521692276001, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
+	if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), 930.18884277344,45.714645385742,80.090049743652, true) <= 2 then
+		DrawMarker(1,930.18884277344,45.714645385742,80.090049743652, 0, 0, 0, 0, 0, 0, 2.001, 2.0001, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0)
 		ClearPrints()
 		SetTextEntry_2("STRING")
 		AddTextComponentString("Appuyez sur 'E' pour jouer ou arrêter")

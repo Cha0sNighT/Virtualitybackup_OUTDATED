@@ -431,8 +431,8 @@ AddEventHandler('rconCommand', function(commandName, args)
 					TriggerClientEvent('chatMessage', tonumber(args[1]), "CONSOLE", {0, 0, 0}, "Your money has been set to: $" .. tonumber(args[2]))
 				end
 			end)
-
 			CancelEvent()
+	
 		elseif commandName == 'unban' then
 			if #args ~= 1 then
 					RconPrint("Usage: unban [identifier]\n")
@@ -490,12 +490,3 @@ end)
 --end, function(source, args, user)
 --	TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Insufficienct permissions!")
 --end)
-
--- ME
-
-TriggerEvent('es:addAdminCommand', 'me', permission.normal, function(source, args, user)
-	table.remove(args, 1)
-	TriggerClientEvent('chatMessage', -1, "^3[Me]", {255, 0, 0}, " (^2 " .. GetPlayerName(source) .." | "..source.."^0 ) " .. table.concat(args, " "))
-end, function(source, args, user)
-	TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Insufficienct permissions!")
-end)

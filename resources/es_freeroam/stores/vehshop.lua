@@ -153,7 +153,6 @@ local vehshop = {
 				{name = "Bullet", costs = 155000, description = {}, model = "bullet"},
 				{name = "Cheetah", costs = 650000, description = {}, model = "cheetah"},
 				{name = "Entity XF", costs = 795000, description = {}, model = "entityxf"},
-				{name = "ETR1", costs = 1995000, description = {}, model = "sheava"},
 				{name = "FMJ", costs = 1750000, description = {}, model = "fmj"},
 				{name = "GP1", costs = 1260000, description = {}, model = "gp1"},
 				{name = "Itali GTB", costs = 1189000, description = {}, model = "italigtb"},
@@ -171,10 +170,10 @@ local vehshop = {
 				{name = "Turismo R", costs = 500000, description = {}, model = "turismor"},
 				{name = "Tyrus", costs = 2550000, description = {}, model = "tyrus"},
 				{name = "Vacca", costs = 240000, description = {}, model = "vacca"},
+				{name = "Vagner", costs = 1535000, description = {}, model = "vagner"},
 				{name = "Voltic", costs = 150000, description = {}, model = "voltic"},
 				{name = "X80 Proto", costs = 2700000, description = {}, model = "prototipo"},
 				{name = "XA-21", costs = 2375000, description = {}, model = "xa21"},
-				{name = "Zentorno", costs = 725000, description = {}, model = "zentorno"},
 			}
 		},
 		["muscle"] = {
@@ -196,6 +195,7 @@ local vehshop = {
 				{name = "Gauntlet", costs = 32000, description = {}, model = "gauntlet"},
 				{name = "Hotknife", costs = 90000, description = {}, model = "hotknife"},
 				{name = "Nightshade", costs = 585000, description = {}, model = "nightshade"},
+				{name = "Phoenix", costs = 125000, description = {}, model = "phoenix"},
 				{name = "Picador", costs = 9000, description = {}, model = "picador"},
 				{name = "Sabre Turbo", costs = 15000, description = {}, model = "sabregt"},
 				{name = "Sabre Turbo Custom", costs = 505000, description = {}, model = "sabregt2"},

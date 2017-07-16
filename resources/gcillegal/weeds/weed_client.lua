@@ -4,30 +4,29 @@ local Weeds = {}
 DecorRegister('illegal_lastBuyWeed', 3)
 
 Weeds.recoltes = {
-    { pos = {x = 2215.85, y = 5575.36, z = 53.69}, time = 0},
-    { pos = {x = 2216.24, y = 5577.55, z = 53.78}, time = 0},
-    { pos = {x = 2218.19, y = 5575.20, z = 53.70}, time = 0},
-    { pos = {x = 2221.00, y = 5575.00, z = 53.71}, time = 0},
-    { pos = {x = 2222.70, y = 5574.80, z = 53.73}, time = 0},
-    { pos = {x = 2227.30, y = 5574.60, z = 53.79}, time = 0},
-    { pos = {x = 2230.70, y = 5574.40, z = 53.90}, time = 0},
-    { pos = {x = 2232.43, y = 5576.30, z = 53.97}, time = 0},
-    { pos = {x = 2230.22, y = 5576.55, z = 53.93}, time = 0},
-    { pos = {x = 2227.74, y = 5576.66, z = 53.86}, time = 0},
-    { pos = {x = 2225.44, y = 5576.90, z = 53.85}, time = 0},
-    { pos = {x = 2223.05, y = 5577.12, z = 53.83}, time = 0},
-    { pos = {x = 2220.60, y = 5577.06, z = 53.83}, time = 0},
-    { pos = {x = 2218.60, y = 5577.26, z = 53.85}, time = 0},
-    { pos = {x = 2219.00, y = 5579.42, z = 53.89}, time = 0},
-    { pos = {x = 2223.80, y = 5579.30, z = 53.91}, time = 0},
-    { pos = {x = 2225.40, y = 5578.94, z = 53.88}, time = 0},
-    { pos = {x = 2230.15, y = 5579.00, z = 53.97}, time = 0},
-    { pos = {x = 2233.90, y = 5578.70, z = 54.11}, time = 0}
+    { pos = {x = -875.19732666016, y = 183.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -877.19732666016, y = 183.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -879.19732666016, y = 183.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -881.19732666016, y = 183.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -883.19732666016, y = 183.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -885.19732666016, y = 183.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -875.19732666016, y = 181.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -875.19732666016, y = 179.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -877.19732666016, y = 181.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -877.19732666016, y = 179.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -879.19732666016, y = 181.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -879.19732666016, y = 179.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -881.19732666016, y = 181.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -881.19732666016, y = 179.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -883.19732666016, y = 181.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -883.19732666016, y = 179.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -885.19732666016, y = 181.54217529297, z = 68.026702880859}, time = 0},
+    { pos = {x = -885.19732666016, y = 179.54217529297, z = 68.026702880859}, time = 0}
 }
-Weeds.tranformCoord = {x = 3726.72290039063, y = 4539.39208984375, z = 22.0390720367432}
+Weeds.tranformCoord = {x = -290.834, y = -983.026, z = 24.137}
 Weeds.tranformRayon = 10.0
 Weeds.tranformTime = 4000
-Weeds.FullVenteCoord = { x = -1175.94, y = -1547.63, z = 17.33}
+Weeds.FullVenteCoord = { x = -1146.9346923828, y = -1562.0366210938, z = 3.4049291610718}
 Weeds.VenteUnityCenter = {x = -2200.0, y= -1700.0, z = 0.0}
 Weeds.VenteUnityRayon = 1070.0
 Weeds.passNbTry = 0
@@ -35,22 +34,22 @@ Weeds.inRayon = false
 
 Weeds.Text = {
     NoPlant = '~o~Aucune plante',
-    RecolteKo = '~o~La pouse n\'est pas encore à maturité',
+    RecolteKo = '~o~La pousse n\'est pas encore à maturité',
     RecoltePremature = '~b~Récolte prématurée possible',
     RecolteOk = '~g~Prête à être récoltée',
     ActionRecolte = '~INPUT_PICKUP~ Récolter',
     ActionPanter = '~INPUT_PICKUP~ Planter une graine',
     ActionInteraction = '~INPUT_PICKUP~ Interagir',
-    TransformEncours = '~b~Transformation du cannabis en cours',
-    TransformOk = '+1 ~o~Joins',
+    TransformEncours = '~b~Transformation du canabis en cours',
+    TransformOk = '+1 ~o~Pochon',
     NoPassword = '...',
     PasswordKo = '~r~C\'est pas le bon mot de passe, Dégage !',
     PasswordOld  = '~b~C\'est l\'ancien mot de passe ça !',
     PasswordCorrect = '~g~Je t\'achète tout à ~w~100$ ~g~unité pour un total de ~r~',
-    GoodPlaceToSell = '~o~ça semble un bon emplacement pour vendre des joins, trouve des clients',
+    GoodPlaceToSell = '~o~ça semble un bon emplacement pour vendre tes pochons, trouve des clients',
     PasswordSend = "Pres de ~b~la boutique~w~, quelqu'un achète en masse.\n~o~Mot de passe: ~r~",
-    Buy2 = '~g~Je te prend deux ~b~joins~w~ pour ~o~',
-    Buy1 = '~b~Je te prend un ~b~join~w~ pour ~o~',
+    Buy2 = '~g~Je te prend deux ~b~pochons~w~ pour ~o~',
+    Buy1 = '~b~Je te prend un ~b~pochon~w~ pour ~o~',
     Buy0 = '~o~Garde ta merde, j\'en veux pas',
     DejaPropo = '~d~Encore ?, Va voir ailleurs, j\'ai déjà ce qu\'il me faut~',
     RecolteEncours = '~b~Récolte en cours',

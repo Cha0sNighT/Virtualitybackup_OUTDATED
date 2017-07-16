@@ -75,6 +75,7 @@ local blips = {
     -- {name="Casino", id=207, x=925.329, y=46.152, z=80.908 },
     -- {name="Maze Bank Arena", id=135, x=-250.604, y=-2030.000, z=30.000},
     {name="Vanilla Unicorn", id=93, x=134.476, y=-1307.887, z=28.983},
+    {name="Bahama Mamas", id=121, x=-1378.180, y=-595.530, z=28.983},
     -- {name="Smoke on the Water", id=140, x=-1171.42, y=-1572.72, z=3.6636},
     -- {name="Weed Farm", id=140, x=2208.777, y=5578.235, z=53.735},
     -- {name="Downtown Cab Co", id=375, x=900.461, y=-181.466, z=73.89},
@@ -117,7 +118,7 @@ local blips = {
     {name="Poste de Police", id=60, x=-438.862, y=6020.768, z=31.490},
     {name="Poste de Police", id=60, x=818.221, y=-1289.883, z=26.300},
     {name="Prison", id=285, x=1679.049, y=2513.711, z=45.565},
-    {name="Cabinet Goodman, Avocat", id=76, x=109.418594360352, y=-1090.58459472656, z=29.3024749755859},
+    {name="Mairie", id=176, x=195.93809509277, y=-406.34527587891, z=45.256271362305},
     -- Hospitals
     -- {name="Hospital", id=61, x= 1839.6, y= 3672.93, z= 34.28},
     -- {name="Hospital", id=61, x= -247.76, y= 6331.23, z=32.43},
@@ -126,7 +127,7 @@ local blips = {
     -- {name="Hospital", id=61, x= 295.83, y= -1446.94, z= 29.97},
     -- {name="Hospital", id=61, x= -676.98, y= 310.68, z= 83.08},
     {name="Hopital", id=61, x= 1151.21, y= -1529.62, z= 35.37},
-    {name="Auto Ecole", id=147, x=-1078.21, y=-254.218, z=37.7633},
+    --{name="Auto Ecole", id=147, x=-1078.21, y=-254.218, z=37.7633},
     -- {name="Hospital", id=61, x= -874.64, y= -307.71, z= 39.58},
     -- Vehicle Shop (Simeon)
     -- {name="Simeon", id=120, x=-33.803, y=-1102.322, z=25.422},
@@ -571,7 +572,7 @@ RequestIpl("post_hiest_unload")
   RequestIpl("imp_impexp_interior_placement_interior_1_impexp_intwaremed_milo_")
 
   RequestIpl("apa_v_mp_h_04_a")
-
+  RequestIpl("ex_dt1_02_office_02c")
 end)
 
 Citizen.CreateThread(function()

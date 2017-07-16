@@ -82,7 +82,7 @@ function POLICE_SpanwVehicleCar(data)
 		SetVehicleMod(veh, 11, 4)
 		SetVehicleMod(veh, 12, 4)
 		SetVehicleMod(veh, 13, 4)
-		SetVehicleEnginePowerMultiplier(veh, 12.0)
+		SetVehicleEnginePowerMultiplier(veh, 15.0)
 
         --FreezeEntityPosition(veh,true)
         --SetEntityInvincible(veh,true)

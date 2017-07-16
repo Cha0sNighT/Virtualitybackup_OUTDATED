@@ -50,7 +50,7 @@ Citizen.CreateThread(function()
       for i = 1, #coffre do
         Citizen.Wait(0)
           if(isCop == false) then
-            DrawMarker(1,coffre[i].x,coffre[i].y,coffre[i].z,0,0,0,0,0,0,0.5,0.5,0.5,255,255,0,200,0,0,0,0)
+            DrawMarker(1,coffre[i].x,coffre[i].y,coffre[i].z,0,0,0,0,0,0,0.5,0.5,0.5,255,255,0,50,0,0,0,0)
             if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), coffre[i].x,coffre[i].y,coffre[i].z,true ) < 1.5 then
               DisplayHelpText('Appuyez sur ~INPUT_CONTEXT~ pour ouvrir le coffre',0,1,0.5,0.8,0.6,255,255,255,255)
               if (IsControlJustPressed(1,51)) then

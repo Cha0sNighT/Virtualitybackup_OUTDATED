@@ -1,5 +1,23 @@
 -- [Id] = calories, water, needs
 menus = {
+	[8] = {
+		calories=-30,
+		water=0,
+		needs=0,
+		drunk=1
+	},
+	[11] = {
+		calories=0,
+		water=0,
+		needs=0,
+		drunk=1
+	},
+	[28] = {
+		calories=0,
+		water=0,
+		needs=0,
+		drunk=1
+	},
 	[22] = {
 		calories=15,
 		water=0,
@@ -82,6 +100,18 @@ menus = {
 		calories=0,
 		water=20,
 		needs=-4,
+		drunk=0
+	},
+	[42] = {
+		calories=0,
+		water=15,
+		needs=-8,
+		drunk=1
+	},
+	[43] = {
+		calories=0,
+		water=50,
+		needs=-20,
 		drunk=0
 	}
 }

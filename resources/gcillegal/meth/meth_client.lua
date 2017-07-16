@@ -7,7 +7,7 @@
 --=============================================================================
 local myPed = GetPlayerPed(-1)
 local myPos = GetEntityCoords(myPed)
-local currentVehicle = 0 
+local currentVehicle = 0
 local isGoodVehcile = false
 local currentCharge = 0
 
@@ -15,10 +15,10 @@ DecorRegister('illegal_chargeMeth', 3)
 
 local Meth = {}
 Meth.coords = {
-    produitChimique = { x = 889.984 , y = -2215.45 , z = 30.50},
+    produitChimique = { x = 1151.84 , y = -461.231 , z = 65.8343},
     --produitChimique = { x = 2459.34 , y = 3449.22 , z = 49.84},
-    tranformeToMeth = { x = 2459.34 , y = 3449.22 , z = 49.84},
-    venteMeth = { x = 364.495513916016, y = -2064.59716796875, z = 21.7444114685059},
+    tranformeToMeth = { x = 431.738 , y = 2983.38 , z = 39.6129},
+    venteMeth = { x = 205.924, y = -2004.58, z = 17.8615},
 }
 Meth.vehicle = GetHashKey('journey')
 Meth.objectId = 11
@@ -45,7 +45,7 @@ Meth.recolte = function(currentVehicle, isGoodVehcile)
     if isGoodVehcile == false then
         showMessageInformation(Meth.Text.BadVehicle)
     else
-        -- SetVehicleExclusiveDriver(vehicle, true) 41062318F23ED854 
+        -- SetVehicleExclusiveDriver(vehicle, true) 41062318F23ED854
         --Citizen.InvokeNative(0x41062318F23ED854,currentVehicle, true)
         if currentCharge >= 10000 then
             showMessageInformation(Meth.Text.ChargementFullVehicle)
@@ -71,7 +71,7 @@ Meth.tranformeToMeth = function(vehicle)
             0.0,0.0,0.0,
             3.0,
             1,1,1)
-        
+
         showMessageInformation(Meth.Text.TransformToMeth, 8000)
         Citizen.Wait(8000)
         StopParticleFxLooped(effet, 0)
@@ -103,7 +103,7 @@ Meth.checkPoint = function(currentVehicle, isGoodVehcile)
         Meth.venteMeth()
         return
     end
-    
+
     if isGoodVehcile then
         dist = GetDistanceBetweenCoords(myPos.x, myPos.y, myPos.z, Meth.coords.tranformeToMeth.x, Meth.coords.tranformeToMeth.y, Meth.coords.tranformeToMeth.z, false)
         if dist < 10.0 then
@@ -151,8 +151,8 @@ Citizen.CreateThread(function()
         else
             isGoodVehcile = false
         end
-        Meth.checkPoint(currentVehicle, isGoodVehcile)  
-        if isGoodVehcile  then 
+        Meth.checkPoint(currentVehicle, isGoodVehcile)
+        if isGoodVehcile  then
             if Meth.lastVehcile == 0 then
                 currentCharge = DecorGetInt(currentVehicle, 'illegal_chargeMeth')
                 Meth.lastVehcile = currentVehicle
@@ -161,7 +161,7 @@ Citizen.CreateThread(function()
             if currentCharge ~= 0 then
                 Meth.CheckDomamgeVehcile(currentVehicle)
             end
-        elseif Meth.lastVehcile ~= 0 then 
+        elseif Meth.lastVehcile ~= 0 then
             Citizen.Trace('currentCharge set 0')
             DecorSetInt(Meth.lastVehcile, 'illegal_chargeMeth', currentCharge)
             currentCharge = 0
@@ -203,9 +203,9 @@ end)
 -- -- --         Citizen.Wait(0)
 -- --         RequestNamedPtfxAsset(effet)
 -- --         SetPtfxAssetNextCall(effet)
--- -- StartParticleFxNonLoopedOnEntity(effet, GetPlayerPed(-1), 
--- -- 0.0, 0.0, -0.5,  
--- -- 0.0, 0.0, 0.0, 
+-- -- StartParticleFxNonLoopedOnEntity(effet, GetPlayerPed(-1),
+-- -- 0.0, 0.0, -0.5,
+-- -- 0.0, 0.0, 0.0,
 -- -- 1.0, 0, 0, 0)
 
 -- -- local ef = "exp_grd_grenade_smoke"
@@ -238,4 +238,3 @@ end)
 --     end
 
 -- end)
-

@@ -36,10 +36,10 @@ client_script {
 	'vigneron/vigneron_config.lua',
 	'brasseur/brasseur_config.lua',
 	'police/police_client.lua',
- 	'police/police_client_vehicle.lua',
-	'police/police_client_veset.lua',
- 	'police/police_client_notif.lua',
-  	'police/police_Menu.lua',
+  'police/police_client_vehicle.lua',
+  'police/police_client_veset.lua',
+  'police/police_client_notif.lua',
+  'police/police_Menu.lua',
 	'poleemploi/metiers_client.lua',
 	'chomeur/chomeur_client.lua',
 	'fermier/fermier_client.lua',
@@ -73,4 +73,3 @@ server_script {
 }
 
 export 'getIsInService'
-dependency 'coffre'

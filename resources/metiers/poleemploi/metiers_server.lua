@@ -14,7 +14,8 @@
 		{name="ambulancier", id=15},
 		{name="mecano", id=16},
 		{name="taxi", id=17},
-		{name="avocat", id=4}
+		{name="maire", id=5},
+		{name="facteur", id=19}
 	}
 
 	function MineGetPlayerJobID(playerId)
@@ -285,6 +286,49 @@ TriggerEvent('es:addGroupCommand', 'gangrem', "admin", function(source, args, us
 			local player = tonumber(args[2])
 			TriggerEvent("es:getPlayerFromId", player, function(target)
 				TriggerClientEvent("es_freeroam:notify", player, "CHAR_ANDREAS", 1, "Government", false, "You're no longer a Gang member !~w~.")
+				TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "Roger that !")
+				--TriggerClientEvent('chatMessage', player, 'GOVERNMENT', {255, 0, 0}, "You're no longer a cop !")
+				TriggerClientEvent('metiers:getmyjob',player,1)
+			end)
+		else
+			TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "No player with this ID !")
+		end
+	end
+end, function(source, args, user)
+	TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "You haven't the permission to do that !")
+end)
+
+-----------------------------------------------------------------------
+---------------------COMMANDE ADMIN AJOUT / SUPP MAIRE-----------------
+-----------------------------------------------------------------------
+
+TriggerEvent('es:addGroupCommand', 'maireadd', "admin", function(source, args, user)
+     if(not args[2]) then
+		TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "Usage : /maireadd [ID]")
+	else
+		if(GetPlayerName(tonumber(args[2])) ~= nil)then
+			local player = tonumber(args[2])
+			TriggerEvent("es:getPlayerFromId", player, function(target)
+				TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "Roger that !")
+				TriggerClientEvent("es_freeroam:notify", player, "CHAR_ANDREAS", 1, "Government", false, "Vous êtes maintenant Maire !~w~.")
+				TriggerClientEvent('metiers:getmyjob',player,5)
+			end)
+		else
+			TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "No player with this ID !")
+		end
+	end
+end, function(source, args, user)
+	TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "You haven't the permission to do that !")
+end)
+
+TriggerEvent('es:addGroupCommand', 'mairerem', "admin", function(source, args, user)
+     if(not args[2]) then
+		TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "Usage : /mairerem [ID]")
+	else
+		if(GetPlayerName(tonumber(args[2])) ~= nil)then
+			local player = tonumber(args[2])
+			TriggerEvent("es:getPlayerFromId", player, function(target)
+				TriggerClientEvent("es_freeroam:notify", player, "CHAR_ANDREAS", 1, "Government", false, "Vous n'êtes plus maire !~w~.")
 				TriggerClientEvent('chatMessage', source, 'GOVERNMENT', {255, 0, 0}, "Roger that !")
 				--TriggerClientEvent('chatMessage', player, 'GOVERNMENT', {255, 0, 0}, "You're no longer a cop !")
 				TriggerClientEvent('metiers:getmyjob',player,1)

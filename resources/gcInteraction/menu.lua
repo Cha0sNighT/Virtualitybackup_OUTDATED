@@ -53,11 +53,9 @@ Menu.item = {
                 ['Items'] = {
                     { ['Title'] = 'Regarder sa carte d\'identité', ['Event'] = 'gcl:openMeIdentity'},
 					{ ['Title'] = 'Montrer carte d\'identité', ['Event'] = 'gcl:showItentity'},
-                    { ['Title'] = 'Recharger ses armes', ['Event'] = 'weaponshop:GiveWeaponsToPlayer'}
                 }
             }
         },
-		{['Title'] = 'Telephone' , ['Event'] = 'phone:toggleMenu'},
         {['Title'] = 'Emote', ['SubMenu'] = {
             ['Title'] = 'Menu',
             ['Items'] = {

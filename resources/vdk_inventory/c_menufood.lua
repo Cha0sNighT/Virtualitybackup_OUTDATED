@@ -1,5 +1,23 @@
 -- [Id] = calories, water, needs
 menus = {
+	[8] = {
+		calories=-30,
+		water=0,
+		needs=0,
+		drunk=1
+	},
+	[11] = {
+		calories=0,
+		water=0,
+		needs=0,
+		drunk=1
+	},
+	[28] = {
+		calories=0,
+		water=0,
+		needs=0,
+		drunk=1
+	},
 	[22] = {
 		calories=15,
 		water=0,
@@ -56,7 +74,7 @@ menus = {
 	},
 	[41] = {
 		calories=0,
-		water=15,
+		water=45,
 		needs=-8,
 		drunk=0
 	},
@@ -83,6 +101,18 @@ menus = {
 		water=20,
 		needs=-4,
 		drunk=0
+	},
+	[42] = {
+		calories=0,
+		water=15,
+		needs=-8,
+		drunk=1
+	},
+	[43] = {
+		calories=0,
+		water=50,
+		needs=-20,
+		drunk=0
 	}
 }
 
@@ -100,7 +130,7 @@ AddEventHandler("item:drunk", function(item)
           SetPedMotionBlur(GetPlayerPed(-1), true)
           SetPedMovementClipset(GetPlayerPed(-1), "MOVE_M@DRUNK@VERYDRUNK", true)
           SetPedIsDrunk(GetPlayerPed(-1), true)
-          Citizen.Wait(300000)
+          Citizen.Wait(600000)
           ClearTimecycleModifier()
           ResetScenarioTypesEnabled()
           ResetPedMovementClipset(GetPlayerPed(-1), 0)

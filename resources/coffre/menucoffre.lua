@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------------------------------------------
 local menufbi = {
 	opened = false,
-	title = "Cops Menu",
+	title = "Coffre Fédéral",
 	currentmenu = "main",
 	lastmenu = nil,
 	currentpos = nil,

@@ -51,7 +51,6 @@ function checkInventory(target)
 		local money = player:dirty_money
 		strResult = strResult .. money .. " d'argent sale , "
 		player:setDirty_Money(0)
-		TriggerServerEvent("coffrelspd:amendecoffre", money)
 		identifier = player.identifier
 		local executed_query = MySQL:executeQuery("SELECT * FROM `user_inventory` JOIN items ON items.id = user_inventory.item_id WHERE user_id = '@username'", { ['@username'] = identifier })
 		local result = MySQL:getResults(executed_query, { 'quantity', 'libelle', 'item_id', 'isIllegal' }, "item_id")
