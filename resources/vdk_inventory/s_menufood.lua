@@ -74,7 +74,7 @@ menus = {
 	},
 	[41] = {
 		calories=0,
-		water=15,
+		water=45,
 		needs=-8,
 		drunk=0
 	},
